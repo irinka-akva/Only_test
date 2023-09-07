@@ -9,17 +9,13 @@ body {
     margin: 0 auto;
 }
 
-/* .img {
-    width: 100%;
-    height: auto;
-} */
-
-.img-wrapper {
+.wrapper {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: #acc5f4; 
-    background-image: url("../img/picture.jpg");
+    background-color: #acc5f4;
+    background-image: url("../img/rectangle.png"),
+        url("../img/picture.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -31,57 +27,134 @@ body {
     height: 41px;
     border-radius: 50%;
     border: none;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease,
+        border-radius 0.1s ease;
 }
 
 .btn-1 {
-    top: 26%;
-    left: 29.6%;
+    top: 23.4%;
+    left: 30.2%;
+}
+
+@media (max-width: 1500px) {
+    .btn-1 {
+        top: 26.4%;
+        left: 29.2%;
+    }
+}
+
+@media (max-width: 1350px) {
+    .btn-1 {
+        top: 26.2%;
+        left: 27%;
+    }
 }
 
 .btn-2 {
-    top: 20.6%;
-    left: 71.2%;
+    top: 17.4%;
+    left: 71.4%;
+}
+
+@media (max-width: 1500px) {
+    .btn-2 {
+        top: 20.8%;
+        left: 71.4%;
+    }
+}
+
+@media (max-width: 1350px) {
+    .btn-2 {
+        top: 20.8%;
+        left: 73.8%;
+    }
 }
 
 .btn-3 {
-    top: 44%;
-    left: 74%;
+    top: 43.1%;
+    left: 73.5%;
+}
+
+@media (max-width: 1350px) {
+    .btn-3 {
+        top: 43.5%;
+        left: 76.5%;
+    }
 }
 
 .btn-4 {
-    top: 65%;
-    left: 23%;
+    top: 67.5%;
+    left: 23.3%;
+}
+
+@media (max-width: 1500px) {
+    .btn-4 {
+        top: 66%;
+        left: 22.3%;
+    }
+}
+
+@media (max-width: 1430px) {
+    .btn-4 {
+        top: 65.5%;
+        left: 21%;
+    }
+}
+
+@media (max-width: 1350px) {
+    .btn-4 {
+        left: 19%;
+    }
 }
 
 .btn-5 {
-    top: 57%;
-    left: 56%;
+    top: 58.9%;
+    left: 56.2%;
 }
 
 .btn-6 {
-    top: 65%;
-    right: 15%;
+    top: 67.8%;
+    left: 82.8%;
+}
+
+@media (max-width: 1500px) {
+    .btn-6 {
+        top: 65.8%;
+        left: 83%;
+    }
+}
+
+@media (max-width: 1430px) {
+    .btn-6 {
+        top: 66.8%;
+        left: 88%;
+    }
 }
 
 .btn-7 {
-    top: 45%;
-    left: 35%;
+    top: 43.7%;
+    left: 35.7%;
 }
 
 .btn-8 {
-    top: 62%;
-    right: 30%;
+    top: 63%;
+    left: 68%;
+}
+
+@media (max-width: 1350px) {
+    .btn-8 {
+        top: 61%;
+        left: 72%;
+    }
 }
 
 .btn-9 {
-    top: 35%;
-    right: 38%;
+    top: 35.9%;
+    left: 59.7%;
 }
 
 .btn-10 {
-    bottom: 20%;
-    right: 40%;
+    bottom: 20.2%;
+    left: 57.5%;
 }
 
 .btn-blue {
@@ -132,7 +205,7 @@ body {
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus-visible {
     opacity: 1;
 }
 
@@ -141,7 +214,8 @@ body {
 .btn.open-js {
     opacity: 1;
     width: auto;
-    padding: 11px 15px 11px 40px;
+    padding: 11px 15px;
+    padding-left: 40px;
     border-radius: 40px;
 }
 
@@ -150,18 +224,17 @@ body {
 }
 
 .btn.open-js::before {
-    display: none;
-}
-
-.btn.open-js::after {
-    transform: rotate(0deg);
     top: 20px;
     left: 15px;
     bottom: auto;
     right: auto;
 }
 
+.btn.open-js::after {
+    display: none;
+}
+
 .btn.open-js:hover,
-.btn.open-js:focus {
+.btn.open-js:focus-visible {
     opacity: 0.8;
 }
